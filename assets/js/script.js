@@ -1,3 +1,5 @@
+AOS.init()
+
 // music
 let tempMusic= ''
 music = document.querySelector('.music')
@@ -64,7 +66,7 @@ function toogleMusic(event) {
 
 
 //  coundtdown
-let coundtdownDate = new Date("Jan 20, 2025 11:00:00").getTime()
+let coundtdownDate = new Date("Jan 28, 2025 11:00:00").getTime()
 
 let x = setInterval(function () {
     let now = new Date().getTime()

@@ -9,6 +9,7 @@
     --dark-grey: #999;
     --dark: #151515;
     --black: #000;
+    --pink-light:#fcdbe9
 }
 
 html {
@@ -229,3 +230,84 @@ body.transition {
 }
 
 /* ===================== HEro section end */
+
+
+/* Home */
+
+.text-pink {
+    color: var(--pink);
+}
+
+.pembuka-section {
+    padding-top: 75px;
+}
+
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.section-title h3 {
+    margin: 15px 0 0 0;
+    font-size: 32px;
+}
+.section-title p {
+    margin: 15px auto 0 auto;
+}
+
+.section-bg {
+    background-color: var(--pink-muted);
+}
+
+#content-section {
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--pink-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--pink);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--pink-hover);
+}
+
+.card-acara {
+    width: calc(50% - 10px);
+}
+
+@media(max-width: 992px) {
+    .card-acara {
+        width: calc(100% - 10px);
+    }
+}
+
+.btn-pink {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: var(--white);
+    background: var(--pink);
+}
+
+.btn-pink:hover {
+    background: var(--pink-hover);
+    color: var(--white);
+}
+
+.border-pink {
+    border-radius: 15px;
+    border: 2px solid var(--pink);
+}
