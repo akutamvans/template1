@@ -60,3 +60,55 @@ function toogleMusic(event) {
 
     isPlaying = !isPlaying
 }
+
+
+
+//  coundtdown
+let coundtdownDate = new Date("Jan 20, 2025 11:00:00").getTime()
+
+let x = setInterval(function () {
+    let now = new Date().getTime()
+
+    let distance = coundtdownDate - now
+
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24))
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000 )
+
+    document.getElementById('countdown-wedding').innerHTML = `
+                <div class="col-lg-1 col-3">
+              <div class="text-center p-2 rounded text-bg-light">
+                <h5>${days}</h5> Hari
+            </div>
+          </div>
+            <div class="col-lg-1 col-3">
+              <div class="text-center p-2 rounded text-bg-light">
+                <h5>${hours}</h5> Jam
+            </div>
+          </div>
+            <div class="col-lg-1 col-3">
+              <div class="text-center p-2 rounded text-bg-light">
+                <h5>${minutes}</h5> Menit
+            </div>
+          </div>
+            <div class="col-lg-1 col-3">
+              <div class="text-center p-2 rounded text-bg-light">
+                <h5>${seconds}</h5> Detik
+            </div>
+          </div>
+    `
+
+    if (distance < 0) {
+        clearInterval(x)
+        document.getElementById('countdown-wedding').innerHTML = "<span class='text-center p-3 rounded text-light m-2'><h2>Acara Sudah Dimulai!</h2></span>"
+    }
+}, 1000)
+
+// #### nama tamu 
+
+const urlParams = new URLSearchParams(window.location.search)
+const panggilan = urlParams.get('p')
+const nama = urlParams.get('n')
+const namaSambuatan = document.querySelector('#nama-tamu')
+namaSambuatan.innerText = `${panggilan} ${nama},`
